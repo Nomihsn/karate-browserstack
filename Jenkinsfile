@@ -19,7 +19,7 @@ pipeline {
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
                 reportDir: 'target/karate-reports',
-                reportFiles: 'karate-summary.html',
+                reportFiles: 'index.html',
                 reportName: 'Karate Test Report'
             ])
         }
