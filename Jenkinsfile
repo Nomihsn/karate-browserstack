@@ -11,4 +11,17 @@ pipeline {
         }
 
     }
+
+    post {
+        always {
+            publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'target/karate-reports',
+                reportFiles: 'karate-summary.html',
+                reportName: 'Karate Test Report'
+            ])
+        }
+    }
 }
