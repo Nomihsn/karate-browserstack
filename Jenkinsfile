@@ -14,14 +14,15 @@ pipeline {
 
     post {
         always {
-            publishHTML([
-                allowMissing: true,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'target/karate-reports',
-                reportFiles: 'index.html',
-                reportName: 'Karate Test Report'
-            ])
+        publishHTML([
+            allowMissing: true,
+            alwaysLinkToLastBuild: true,
+            keepAll: true,
+            reportDir: 'target/karate-reports',
+            reportFiles: 'index.html',
+            reportName: 'Karate Test Report',
+            useWrapperFileDirectly: true
+        ])
         }
     }
 }
